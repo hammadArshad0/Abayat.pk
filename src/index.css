@@ -66,7 +66,7 @@
   }
 
   .product-card {
-    @apply glass-card overflow-hidden cursor-pointer transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-gold/10 hover:border-gold/30;
+    @apply bg-[#151515] rounded-2xl border border-white/5 overflow-hidden cursor-pointer transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-gold/10 hover:border-gold/30;
   }
 
   .nav-link {

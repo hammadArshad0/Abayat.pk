@@ -46,10 +46,10 @@ export default function AboutBrand() {
       {/* Ornament */}
       <div className="absolute right-8 top-12 opacity-5 pointer-events-none hidden lg:block">
         <svg width="200" height="200" viewBox="0 0 200 200" fill="none">
-          <circle cx="100" cy="100" r="90" stroke="#D4AF37" strokeWidth="1"/>
-          <circle cx="100" cy="100" r="70" stroke="#D4AF37" strokeWidth="0.5"/>
-          <circle cx="100" cy="100" r="50" stroke="#D4AF37" strokeWidth="0.5"/>
-          <path d="M100 10 L100 190 M10 100 L190 100 M29 29 L171 171 M171 29 L29 171" stroke="#D4AF37" strokeWidth="0.5"/>
+          <circle cx="100" cy="100" r="90" stroke="#D4AF37" strokeWidth="1" />
+          <circle cx="100" cy="100" r="70" stroke="#D4AF37" strokeWidth="0.5" />
+          <circle cx="100" cy="100" r="50" stroke="#D4AF37" strokeWidth="0.5" />
+          <path d="M100 10 L100 190 M10 100 L190 100 M29 29 L171 171 M171 29 L29 171" stroke="#D4AF37" strokeWidth="0.5" />
         </svg>
       </div>
 

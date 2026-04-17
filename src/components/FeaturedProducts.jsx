@@ -45,7 +45,7 @@ function ProductCard({ product, index }) {
             <img
               src={product.image}
               alt={product.name}
-              className="w-full h-full object-cover object-top opacity-80 group-hover:opacity-100 transition-opacity duration-500"
+              className="w-full h-full object-cover object-top opacity-100 transition-opacity duration-500"
             />
           )}
           {!product.image && (
