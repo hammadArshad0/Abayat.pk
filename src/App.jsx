@@ -11,10 +11,13 @@ import WhatsAppButton from './components/WhatsAppButton';
 import ScrollToTop from './components/ScrollToTop';
 import TrendingArticles from './components/TrendingArticles';
 import PageLoader from './components/PageLoader';
+import { CartProvider } from './context/CartContext';
+import CartDrawer from './components/CartDrawer';
+import CheckoutModal from './components/CheckoutModal';
 
 export default function App() {
   return (
-    <>
+    <CartProvider>
       <PageLoader />
       <div className="relative min-h-screen bg-white text-neutral-900 overflow-x-hidden">
         <Navbar />
@@ -31,7 +34,9 @@ export default function App() {
         <Footer />
         <WhatsAppButton />
         <ScrollToTop />
+        <CartDrawer />
+        <CheckoutModal />
       </div>
-    </>
+    </CartProvider>
   );
 }

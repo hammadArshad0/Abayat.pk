@@ -2,13 +2,16 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Eye, ShoppingBag, Sparkles } from 'lucide-react';
 import { featuredProducts } from '../data/products';
+import { useCart } from '../context/CartContext';
 
 function TrendingCard({ product, index }) {
   const [added, setAdded] = useState(false);
+  const { addToCart } = useCart();
 
   const handleAddToCart = (e) => {
     e.preventDefault();
     setAdded(true);
+    addToCart(product);
     setTimeout(() => setAdded(false), 2000);
   };
 

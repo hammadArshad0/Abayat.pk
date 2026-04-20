@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, ShoppingBag, Search, Heart, Phone } from 'lucide-react';
+import { useCart } from '../context/CartContext';
 
 const navLinks = [
   { label: 'Home', href: '#home' },
@@ -14,6 +15,7 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeLink, setActiveLink] = useState('Home');
+  const { cartCount, toggleDrawer } = useCart();
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 40);
@@ -84,11 +86,13 @@ export default function Navbar() {
             <button className="text-white/70 hover:text-gold transition-colors duration-300 hidden md:block">
               <Heart size={18} />
             </button>
-            <button className="relative text-white/70 hover:text-gold transition-colors duration-300">
+            <button onClick={toggleDrawer} className="relative text-white/70 hover:text-gold transition-colors duration-300">
               <ShoppingBag size={20} />
-              <span className="absolute -top-1.5 -right-1.5 w-4 h-4 bg-gold text-black text-[9px] font-bold rounded-full flex items-center justify-center font-poppins">
-                0
-              </span>
+              {cartCount > 0 && (
+                <span className="absolute -top-1.5 -right-1.5 w-4 h-4 bg-gold text-black text-[9px] font-bold rounded-full flex items-center justify-center font-poppins">
+                  {cartCount}
+                </span>
+              )}
             </button>
             {/* Mobile menu toggle */}
             <button
