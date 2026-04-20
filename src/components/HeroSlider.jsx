@@ -133,7 +133,7 @@ export default function HeroSlider() {
                               {slide.cta}
                               <ChevronRight size={16} className="group-hover:translate-x-1 transition-transform" />
                             </a>
-                            <a href="#categories" className="btn-outline">
+                            <a href="#categories" className="btn-outline-hero">
                               {slide.ctaSecondary}
                             </a>
                           </motion.div>

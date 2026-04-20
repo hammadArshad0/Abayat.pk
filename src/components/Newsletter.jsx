@@ -18,10 +18,10 @@ export default function Newsletter() {
   };
 
   return (
-    <section id="contact" className="py-24 relative overflow-hidden">
+    <section id="contact" className="py-24 relative overflow-hidden bg-white">
       {/* Radial glow */}
       <div className="absolute inset-0 pointer-events-none"
-        style={{ background: 'radial-gradient(ellipse at center, rgba(212,175,55,0.06) 0%, transparent 65%)' }} />
+        style={{ background: 'radial-gradient(ellipse at center, rgba(212,175,55,0.03) 0%, transparent 65%)' }} />
 
       {/* Diagonal gold lines decor */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-[0.03]">
@@ -51,24 +51,23 @@ export default function Newsletter() {
           <h2 className="section-title mt-3 mb-4">
             Join Our <span className="text-gradient-gold">Royal Circle</span>
           </h2>
-          <p className="text-nude/50 font-poppins text-sm leading-relaxed mb-8 max-w-md mx-auto">
+          <p className="text-neutral-500 font-poppins text-sm leading-relaxed mb-8 max-w-md mx-auto">
             Subscribe for exclusive access to new arrivals, members-only discounts, and modest fashion inspiration delivered to your inbox.
           </p>
 
           {/* Form */}
           {!subscribed ? (
             <form onSubmit={handleSubmit} className="relative max-w-md mx-auto">
-              <div className="flex gap-0 rounded-full border border-gold/20 overflow-hidden p-1"
-                style={{ background: 'rgba(255,255,255,0.04)', backdropFilter: 'blur(10px)' }}>
+              <div className="flex gap-0 rounded-full border border-neutral-300 overflow-hidden p-1 bg-neutral-50 shadow-sm">
                 <div className="flex items-center pl-4 flex-shrink-0">
-                  <Mail size={16} className="text-gold/40" />
+                  <Mail size={16} className="text-neutral-400" />
                 </div>
                 <input
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="Enter your email address"
-                  className="flex-1 bg-transparent px-4 py-3 text-beige placeholder-nude/30 font-poppins text-sm outline-none"
+                  className="flex-1 bg-transparent px-4 py-3 text-neutral-900 placeholder-neutral-400 font-poppins text-sm outline-none"
                   required
                 />
                 <button
@@ -88,7 +87,7 @@ export default function Newsletter() {
                   )}
                 </button>
               </div>
-              <p className="text-nude/30 text-xs font-poppins mt-3">
+              <p className="text-neutral-400 text-xs font-poppins mt-3">
                 No spam, ever. Unsubscribe anytime. 💌
               </p>
             </form>
@@ -99,8 +98,8 @@ export default function Newsletter() {
               className="flex flex-col items-center gap-3"
             >
               <CheckCircle size={52} className="text-gold" />
-              <p className="text-beige font-playfair text-xl font-semibold">Welcome to the Royal Circle!</p>
-              <p className="text-nude/50 font-poppins text-sm">
+              <p className="text-neutral-900 font-playfair text-xl font-semibold">Welcome to the Royal Circle!</p>
+              <p className="text-neutral-500 font-poppins text-sm">
                 You'll receive exclusive updates and offers soon. JazakAllah! ✨
               </p>
             </motion.div>
@@ -109,7 +108,7 @@ export default function Newsletter() {
           {/* Benefits */}
           <div className="flex flex-wrap justify-center gap-6 mt-10">
             {['Exclusive Deals', 'New Arrivals First', 'Style Tips'].map((b, i) => (
-              <div key={i} className="flex items-center gap-2 text-nude/40 text-xs font-poppins">
+              <div key={i} className="flex items-center gap-2 text-neutral-500 text-xs font-poppins">
                 <div className="w-1 h-1 rounded-full bg-gold" />
                 {b}
               </div>

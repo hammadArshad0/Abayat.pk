@@ -20,8 +20,8 @@
 
   body {
     font-family: 'Poppins', sans-serif;
-    background-color: #0D0D0D;
-    color: #F8EDE3;
+    background-color: #FFFFFF;
+    color: #111111;
     overflow-x: hidden;
   }
 
@@ -32,24 +32,29 @@
 
 @layer components {
   .btn-gold {
-    @apply inline-flex items-center gap-2 px-8 py-3 bg-gold-gradient text-black font-semibold font-poppins rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-gold/30 active:scale-95;
+    @apply inline-flex items-center gap-2 px-8 py-3 bg-gold-gradient text-black font-semibold font-poppins rounded-full transition-all duration-300 hover:scale-105 hover:shadow-xl active:scale-95;
     font-size: 0.9rem;
     letter-spacing: 0.05em;
   }
 
   .btn-outline {
-    @apply inline-flex items-center gap-2 px-8 py-3 border border-gold text-gold font-semibold font-poppins rounded-full transition-all duration-300 hover:bg-gold hover:text-black hover:shadow-lg hover:shadow-gold/30 active:scale-95;
+    @apply inline-flex items-center gap-2 px-8 py-3 border border-neutral-300 text-neutral-800 font-semibold font-poppins rounded-full transition-all duration-300 hover:border-gold hover:text-gold hover:shadow-lg hover:shadow-gold/10 active:scale-95 bg-white/50 backdrop-blur-sm hover:bg-white;
+    font-size: 0.9rem;
+    letter-spacing: 0.05em;
+  }
+
+  .btn-outline-hero {
+    @apply inline-flex items-center gap-2 px-8 py-3 border border-white/50 text-white font-semibold font-poppins rounded-full transition-all duration-300 hover:border-gold hover:text-white hover:bg-gold hover:shadow-lg hover:shadow-gold/30 active:scale-95;
     font-size: 0.9rem;
     letter-spacing: 0.05em;
   }
 
   .glass-card {
-    @apply backdrop-blur-md rounded-2xl border border-white/10;
-    background: rgba(255, 255, 255, 0.04);
+    @apply bg-white/90 backdrop-blur-md rounded-2xl border border-neutral-100 shadow-[0_4px_20px_rgba(0,0,0,0.03)];
   }
 
   .section-title {
-    @apply font-playfair text-4xl md:text-5xl font-bold text-beige leading-tight;
+    @apply font-playfair text-4xl md:text-5xl font-bold text-neutral-900 leading-tight;
   }
 
   .gold-line {
@@ -66,11 +71,11 @@
   }
 
   .product-card {
-    @apply bg-[#151515] rounded-2xl border border-white/5 overflow-hidden cursor-pointer transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-gold/10 hover:border-gold/30;
+    @apply bg-white rounded-3xl border border-neutral-100/80 overflow-hidden cursor-pointer transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(0,0,0,0.06)];
   }
 
   .nav-link {
-    @apply text-nude/80 hover:text-gold font-poppins text-sm font-medium transition-all duration-300 tracking-wide uppercase relative;
+    @apply text-white/80 hover:text-gold font-poppins text-sm font-medium transition-all duration-300 tracking-wide uppercase relative;
   }
 
   .nav-link::after {

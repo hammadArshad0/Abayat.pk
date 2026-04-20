@@ -9,17 +9,19 @@ import Newsletter from './components/Newsletter';
 import Footer from './components/Footer';
 import WhatsAppButton from './components/WhatsAppButton';
 import ScrollToTop from './components/ScrollToTop';
+import TrendingArticles from './components/TrendingArticles';
 import PageLoader from './components/PageLoader';
 
 export default function App() {
   return (
     <>
       <PageLoader />
-      <div className="relative min-h-screen bg-black text-beige overflow-x-hidden">
+      <div className="relative min-h-screen bg-white text-neutral-900 overflow-x-hidden">
         <Navbar />
         <main>
           <HeroSlider />
           <TrustStrip />
+          <TrendingArticles />
           <Categories />
           <FeaturedProducts />
           <AboutBrand />

@@ -27,11 +27,11 @@ const strips = [
 
 export default function TrustStrip() {
   return (
-    <section className="py-12 relative overflow-hidden bg-neutral-950 border-y border-white/5">
+    <section className="py-12 relative overflow-hidden bg-neutral-50 border-y border-neutral-200">
 
       {/* Premium Ambient Radial Glow */}
       <div className="absolute inset-0 pointer-events-none"
-        style={{ background: 'radial-gradient(circle at center, rgba(212,175,55,0.06) 0%, transparent 70%)' }} />
+        style={{ background: 'radial-gradient(circle at center, rgba(212,175,55,0.03) 0%, transparent 70%)' }} />
 
       <div className="container-custom mx-auto px-4 relative z-10">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
@@ -47,17 +47,17 @@ export default function TrustStrip() {
                 ease: [0.25, 0.1, 0.25, 1] // Super smooth easing
               }}
               // Mobile par text center aur screens par left-aligned
-              className="group flex flex-col items-center text-center sm:flex-row sm:text-left gap-5 p-4 rounded-2xl hover:bg-white/[0.02] transition-colors duration-500 cursor-default"
+              className="group flex flex-col items-center text-center sm:flex-row sm:text-left gap-5 p-4 rounded-2xl hover:bg-white transition-colors duration-500 cursor-default shadow-sm hover:shadow-md"
             >
 
               {/* Icon Container with Hover Glow */}
-              <div className="w-14 h-14 rounded-full bg-neutral-900 border border-gold/20 flex items-center justify-center flex-shrink-0 group-hover:scale-110 group-hover:border-gold/50 group-hover:shadow-[0_0_20px_rgba(212,175,55,0.15)] transition-all duration-500 ease-out relative">
-                <item.icon size={22} className="text-gold opacity-80 group-hover:opacity-100 transition-opacity" />
+              <div className="w-14 h-14 rounded-full bg-white border border-neutral-200 flex items-center justify-center flex-shrink-0 group-hover:scale-110 group-hover:border-gold/50 group-hover:shadow-[0_4px_20px_rgba(212,175,55,0.15)] transition-all duration-500 ease-out relative">
+                <item.icon size={22} className="text-gold opacity-90 group-hover:opacity-100 transition-opacity" />
               </div>
 
               {/* Typography */}
               <div>
-                <h4 className="font-playfair text-white text-base md:text-lg font-semibold tracking-wide mb-1 group-hover:text-gold transition-colors duration-300">
+                <h4 className="font-playfair text-neutral-900 text-base md:text-lg font-semibold tracking-wide mb-1 group-hover:text-gold transition-colors duration-300">
                   {item.title}
                 </h4>
                 <p className="text-neutral-500 text-xs font-poppins tracking-wider">

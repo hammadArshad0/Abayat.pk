@@ -85,10 +85,10 @@ function CategoryCard({ cat, index, isLarge }) {
 
 export default function Categories() {
   return (
-    <section id="categories" className="py-32 relative bg-neutral-950 overflow-hidden">
+    <section id="categories" className="py-32 relative bg-white overflow-hidden border-b border-neutral-100">
       {/* Ambient Background Glows */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] opacity-20 pointer-events-none"
-        style={{ background: 'radial-gradient(ellipse at top, #D4AF37 0%, transparent 70%)' }} />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] opacity-[0.03] pointer-events-none"
+        style={{ background: 'radial-gradient(ellipse at top, #000000 0%, transparent 70%)' }} />
 
       <div className="container-custom mx-auto px-4 lg:px-8 max-w-7xl relative z-10">
 
@@ -112,9 +112,9 @@ export default function Categories() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="font-playfair text-4xl md:text-5xl lg:text-6xl font-bold text-white mt-2"
+            className="font-playfair text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 mt-2"
           >
-            Shop by <span className="text-transparent bg-clip-text bg-gradient-to-r from-gold via-yellow-200 to-gold">Collection</span>
+            Shop by <span className="text-gradient-gold">Collection</span>
           </motion.h2>
 
           <motion.p
@@ -122,7 +122,7 @@ export default function Categories() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="text-neutral-400 font-poppins text-base md:text-lg mt-6 max-w-2xl mx-auto leading-relaxed"
+            className="text-neutral-500 font-poppins text-base md:text-lg mt-6 max-w-2xl mx-auto leading-relaxed"
           >
             Curated modest fashion for the modern Muslim woman, masterfully crafted with love from Taxila, Pakistan.
           </motion.p>

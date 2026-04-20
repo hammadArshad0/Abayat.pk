@@ -103,20 +103,20 @@ function ProductCard({ product, index }) {
 
       {/* Product Info */}
       <div className="p-4 flex flex-col flex-1">
-        <span className="text-gold/60 text-[10px] font-poppins uppercase tracking-widest mb-1">
+        <span className="text-neutral-400 text-[10px] font-poppins uppercase tracking-widest mb-1">
           {product.category}
         </span>
-        <h3 className="font-playfair text-beige font-semibold text-base leading-tight mb-2 group-hover:text-gold transition-colors duration-300">
+        <h3 className="font-playfair text-neutral-900 font-semibold text-base leading-tight mb-2 group-hover:text-gold transition-colors duration-300">
           {product.name}
         </h3>
-        <p className="text-nude/40 text-xs font-poppins leading-relaxed mb-3 line-clamp-2 flex-1">
+        <p className="text-neutral-500 text-xs font-poppins leading-relaxed mb-3 line-clamp-2 flex-1">
           {product.description}
         </p>
 
         {/* Rating */}
         <div className="flex items-center gap-2 mb-3">
           <StarRating rating={product.rating} />
-          <span className="text-nude/40 text-xs font-poppins">({product.reviews})</span>
+          <span className="text-neutral-400 text-xs font-poppins">({product.reviews})</span>
         </div>
 
         {/* Color dots */}
@@ -124,7 +124,7 @@ function ProductCard({ product, index }) {
           {product.colors.map((color, i) => (
             <div
               key={i}
-              className="w-4 h-4 rounded-full border border-white/20 cursor-pointer hover:scale-125 transition-transform"
+              className="w-4 h-4 rounded-full border border-neutral-300 cursor-pointer hover:scale-125 transition-transform shadow-sm"
               style={{ backgroundColor: color }}
               title={color}
             />
@@ -132,12 +132,12 @@ function ProductCard({ product, index }) {
         </div>
 
         {/* Price + CTA */}
-        <div className="flex items-center justify-between mt-auto">
+        <div className="flex items-center justify-between mt-auto pt-2 border-t border-neutral-100">
           <div className="flex items-baseline gap-2">
-            <span className="text-gradient-gold font-playfair text-lg font-bold">
+            <span className="text-neutral-900 font-playfair text-lg font-bold">
               Rs. {product.price.toLocaleString()}
             </span>
-            <span className="text-nude/30 text-xs line-through font-poppins">
+            <span className="text-neutral-400 text-xs line-through font-poppins">
               Rs. {product.originalPrice.toLocaleString()}
             </span>
           </div>
@@ -166,8 +166,8 @@ export default function FeaturedProducts() {
     : featuredProducts.filter(p => p.category.toLowerCase().includes(filter.toLowerCase()));
 
   return (
-    <section id="products" className="py-24 relative overflow-hidden">
-      <div className="absolute -top-40 -right-40 w-[500px] h-[500px] rounded-full opacity-[0.03]"
+    <section id="products" className="py-24 relative bg-neutral-50 overflow-hidden">
+      <div className="absolute -top-40 -right-40 w-[500px] h-[500px] rounded-full opacity-[0.02]"
         style={{ background: 'radial-gradient(circle, #D4AF37, transparent)' }} />
 
       <div className="container-custom">
@@ -206,8 +206,8 @@ export default function FeaturedProducts() {
               onClick={() => setFilter(f)}
               className={`px-5 py-2 rounded-full text-xs font-poppins font-medium tracking-wide transition-all duration-300 ${
                 filter === f
-                  ? 'bg-gold text-black shadow-lg shadow-gold/30'
-                  : 'border border-gold/20 text-nude/60 hover:border-gold/40 hover:text-gold'
+                  ? 'bg-neutral-900 text-white shadow-lg shadow-black/10'
+                  : 'bg-white border border-neutral-200 text-neutral-600 hover:border-gold hover:text-gold shadow-sm'
               }`}
             >
               {f}

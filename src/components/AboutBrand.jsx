@@ -36,12 +36,12 @@ const features = [
 
 export default function AboutBrand() {
   return (
-    <section id="about" className="py-24 relative overflow-hidden">
+    <section id="about" className="py-24 relative bg-white overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 pointer-events-none"
-        style={{ background: 'linear-gradient(135deg, rgba(212,175,55,0.03) 0%, transparent 50%, rgba(212,175,55,0.02) 100%)' }} />
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/20 to-transparent" />
-      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/20 to-transparent" />
+        style={{ background: 'linear-gradient(135deg, rgba(212,175,55,0.02) 0%, transparent 50%, rgba(212,175,55,0.01) 100%)' }} />
+      <div className="absolute top-0 left-0 right-0 h-px bg-neutral-100" />
+      <div className="absolute bottom-0 left-0 right-0 h-px bg-neutral-100" />
 
       {/* Ornament */}
       <div className="absolute right-8 top-12 opacity-5 pointer-events-none hidden lg:block">
@@ -70,10 +70,10 @@ export default function AboutBrand() {
               Where Faith Meets <span className="text-gradient-gold">Fashion</span>
             </h2>
             <div className="w-16 h-px bg-gradient-to-r from-gold to-transparent mb-7" />
-            <p className="text-nude/55 font-poppins text-sm leading-8 mb-5">
-              Born in the heart of Taxila, Pakistan, <strong className="text-beige font-medium">Abayat.pk</strong> was founded with a singular vision — to bring world-class modest fashion to every Muslim woman across Pakistan, without compromise on quality or elegance.
+            <p className="text-neutral-500 font-poppins text-sm leading-8 mb-5">
+              Born in the heart of Taxila, Pakistan, <strong className="text-neutral-900 font-medium font-playfair text-base">Abayat.pk</strong> was founded with a singular vision — to bring world-class modest fashion to every Muslim woman across Pakistan, without compromise on quality or elegance.
             </p>
-            <p className="text-nude/55 font-poppins text-sm leading-8 mb-8">
+            <p className="text-neutral-500 font-poppins text-sm leading-8 mb-8">
               Inspired by the grandeur of Middle Eastern luxury fashion houses, we meticulously curate every piece in our collection — from hand-embroidered abayas to ultra-fine Saudi niqabs — ensuring that modesty and magnificence go hand in hand.
             </p>
 
@@ -84,9 +84,9 @@ export default function AboutBrand() {
                 { value: '200+', label: 'Products' },
                 { value: '3 Yrs', label: 'Experience' },
               ].map((stat, i) => (
-                <div key={i} className="text-center glass-card py-5 px-2 hover:border-gold/20 transition-colors duration-300">
+                <div key={i} className="text-center glass-card py-5 px-2 hover:border-gold/30 transition-colors duration-300">
                   <div className="text-gradient-gold font-playfair text-2xl font-bold">{stat.value}</div>
-                  <div className="text-nude/40 text-[10px] font-poppins mt-1 tracking-wide">{stat.label}</div>
+                  <div className="text-neutral-500 text-[10px] font-poppins mt-1 tracking-wide">{stat.label}</div>
                 </div>
               ))}
             </div>
@@ -113,9 +113,9 @@ export default function AboutBrand() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
               {/* Bottom tag */}
               <div className="absolute bottom-6 left-6 right-6">
-                <div className="glass-card px-5 py-4 border-gold/20">
-                  <p className="text-gradient-gold font-playfair text-lg font-semibold">"Elegance is our tradition"</p>
-                  <p className="text-nude/50 text-xs font-poppins mt-1">— Abayat.pk, Taxila</p>
+                <div className="glass-card px-5 py-4 border-white/40">
+                  <p className="text-gradient-gold font-playfair text-lg font-semibold shadow-black/50">"Elegance is our tradition"</p>
+                  <p className="text-white/80 text-xs font-poppins mt-1">— Abayat.pk, Taxila</p>
                 </div>
               </div>
             </div>
@@ -144,7 +144,7 @@ export default function AboutBrand() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="font-playfair text-3xl font-bold text-beige"
+            className="font-playfair text-3xl font-bold text-neutral-900"
           >
             Why Choose <span className="text-gradient-gold">Abayat.pk</span>
           </motion.h3>
@@ -159,16 +159,16 @@ export default function AboutBrand() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-20px' }}
               transition={{ delay: i * 0.08, duration: 0.5 }}
-              className="glass-card p-6 group hover:border-gold/20 transition-all duration-400 hover:-translate-y-1 hover:shadow-lg hover:shadow-gold/5"
+              className="glass-card p-6 group hover:border-gold/30 transition-all duration-400 hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(212,175,55,0.08)] bg-white/50"
             >
-              <div className="w-11 h-11 rounded-xl border border-gold/20 flex items-center justify-center mb-4 group-hover:border-gold/40 transition-colors duration-300"
-                style={{ background: 'rgba(212,175,55,0.07)' }}>
-                <feat.icon size={20} className="text-gold" />
+              <div className="w-11 h-11 rounded-xl border border-gold/20 flex items-center justify-center mb-4 group-hover:bg-gold group-hover:text-white transition-all duration-300"
+                style={{ background: 'rgba(212,175,55,0.04)' }}>
+                <feat.icon size={20} className="text-gold group-hover:text-black transition-colors" />
               </div>
-              <h4 className="font-playfair text-beige font-semibold text-base mb-2 group-hover:text-gold transition-colors duration-300">
+              <h4 className="font-playfair text-neutral-900 font-semibold text-base mb-2 group-hover:text-gold transition-colors duration-300">
                 {feat.title}
               </h4>
-              <p className="text-nude/40 text-xs font-poppins leading-relaxed">
+              <p className="text-neutral-500 text-xs font-poppins leading-relaxed">
                 {feat.desc}
               </p>
             </motion.div>

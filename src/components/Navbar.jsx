@@ -29,7 +29,7 @@ export default function Navbar() {
         transition={{ duration: 0.6, ease: 'easeOut' }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           scrolled
-            ? 'bg-black/80 backdrop-blur-xl border-b border-gold/10 shadow-2xl shadow-black/50'
+            ? 'bg-black/95 backdrop-blur-xl border-b border-gold/20 shadow-2xl shadow-black/20'
             : 'bg-transparent'
         }`}
       >
@@ -37,7 +37,7 @@ export default function Navbar() {
         <div className="border-b border-gold/10 py-1.5 hidden md:block"
           style={{ background: 'rgba(212,175,55,0.06)' }}>
           <div className="container-custom flex justify-between items-center">
-            <p className="text-xs text-nude/50 font-poppins tracking-widest">
+            <p className="text-xs text-white/60 font-poppins tracking-widest">
               📍 Taxila, Pakistan &nbsp;|&nbsp; 🚚 Free Delivery All Over Pakistan
             </p>
             <a
@@ -56,7 +56,7 @@ export default function Navbar() {
             <span className="text-gradient-gold font-playfair text-2xl md:text-3xl font-bold tracking-tight group-hover:scale-105 transition-transform duration-300 inline-block">
               Abayat.pk
             </span>
-            <span className="text-nude/40 text-[9px] font-poppins tracking-[0.4em] uppercase mt-0.5">
+            <span className="text-white/40 text-[9px] font-poppins tracking-[0.4em] uppercase mt-0.5">
               Luxury Modest Fashion
             </span>
           </a>
@@ -78,13 +78,13 @@ export default function Navbar() {
 
           {/* Icons */}
           <div className="flex items-center gap-3 md:gap-4">
-            <button className="text-nude/60 hover:text-gold transition-colors duration-300 hidden md:block">
+            <button className="text-white/70 hover:text-gold transition-colors duration-300 hidden md:block">
               <Search size={18} />
             </button>
-            <button className="text-nude/60 hover:text-gold transition-colors duration-300 hidden md:block">
+            <button className="text-white/70 hover:text-gold transition-colors duration-300 hidden md:block">
               <Heart size={18} />
             </button>
-            <button className="relative text-nude/60 hover:text-gold transition-colors duration-300">
+            <button className="relative text-white/70 hover:text-gold transition-colors duration-300">
               <ShoppingBag size={20} />
               <span className="absolute -top-1.5 -right-1.5 w-4 h-4 bg-gold text-black text-[9px] font-bold rounded-full flex items-center justify-center font-poppins">
                 0
@@ -93,7 +93,7 @@ export default function Navbar() {
             {/* Mobile menu toggle */}
             <button
               onClick={() => setMenuOpen(!menuOpen)}
-              className="md:hidden text-nude/80 hover:text-gold transition-colors duration-300 ml-1"
+              className="md:hidden text-white/80 hover:text-gold transition-colors duration-300 ml-1"
             >
               {menuOpen ? <X size={22} /> : <Menu size={22} />}
             </button>
@@ -122,7 +122,7 @@ export default function Navbar() {
                     <a
                       href={link.href}
                       onClick={() => { setActiveLink(link.label); setMenuOpen(false); }}
-                      className="block py-3 text-nude/80 hover:text-gold font-poppins text-sm tracking-wide border-b border-white/5 transition-colors"
+                      className="block py-3 text-white/80 hover:text-gold font-poppins text-sm tracking-wide border-b border-white/5 transition-colors"
                     >
                       {link.label}
                     </a>
